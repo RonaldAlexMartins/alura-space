@@ -28,7 +28,7 @@ export default function Menu () {
         </li>
         <li className={styles.menu__item}>
           <img src={surpreendaMe} alt="" />
-          <a href="">Surprendam-e</a>
+          <a href="">Surprenda-me</a>
         </li>
       </ul>
     </nav>
