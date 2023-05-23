@@ -1,15 +1,13 @@
 import React from "react";
-import style from "./Menu.module.scss";
-import icones from "./icones.json";
+import styles from "./Menu.module.scss";
 import Icone from "./menu/icones";
+import icones from "./icones.json"
 
 export default function Menu() {
   return (
-    <nav className={style.menu}>
-      <ul className={style.menu__lista}>
-        {icones.map((icone) => (
-          <Icone key={icone.id} icone={icone} style={style} />
-        ))}
+    <nav className={styles.menu}>
+      <ul className={styles.menu__lista}>
+          {icones.map((icone) => <Icone key={icone.nome} style={styles} icone={icone}/>)}
       </ul>
     </nav>
   );
