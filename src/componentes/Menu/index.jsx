@@ -1,37 +1,14 @@
-import React from 'react';
-import styles from './Menu.module.scss';
-import home from '../../assets/icones/home-ativo.png';
-import maisCurtidas from '../../assets/icones/mais-curtidas-inativo.png';
-import maisVistas from '../../assets/icones/mais-vistas-inativo.png';
-import novas from '../../assets/icones/novas-inativo.png';
-import surpreendaMe from '../../assets/icones/surpreenda-me-inativo.png';
+import React from "react";
+import styles from "./Menu.module.scss";
+import Icone from "./menu/icones";
+import icones from "./icones.json"
 
-
-export default function Menu () {
+export default function Menu() {
   return (
     <nav className={styles.menu}>
       <ul className={styles.menu__lista}>
-        <li className={styles.menu__item}>
-          <img src={home} alt="" />
-          <a href="">Ínicio</a>
-        </li>
-        <li className={styles.menu__item}>
-          <img src={maisCurtidas} alt="" />
-          <a href="">Mais Curtidas</a>
-        </li>
-        <li className={styles.menu__item}>
-          <img src={maisVistas} alt="" />
-          <a href="">Mais vistas</a>
-        </li>
-        <li className={styles.menu__item}>
-          <img src={novas} alt="" />
-          <a href="">Novas</a>
-        </li>
-        <li className={styles.menu__item}>
-          <img src={surpreendaMe} alt="" />
-          <a href="">Surprenda-me</a>
-        </li>
+          {icones.map((icone) => <Icone key={icone.nome} style={styles} icone={icone}/>)}
       </ul>
     </nav>
-  )
+  );
 }
